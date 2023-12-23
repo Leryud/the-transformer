@@ -3,3 +3,6 @@
 
 # iCloud storage
 .DS_Store
+
+# cache folders
+/__pycache__
