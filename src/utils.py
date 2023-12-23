@@ -1,16 +1,19 @@
 import torch
 
+
 def is_interactive_notebook():
     return __name__ == "__main__"
 
 
 def show_example(fn, args=[]):
-    if __name__ == "__main__": # and RUN_EXAMPLES: TODO : Add RUN_EXAMPLES to hydra config
+    if (
+        __name__ == "__main__"
+    ):  # and RUN_EXAMPLES: TODO : Add RUN_EXAMPLES to hydra config
         return fn(*args)
 
 
 def execute_example(fn, args=[]):
-    if __name__ == "__main__": # and RUN_EXAMPLES:
+    if __name__ == "__main__":  # and RUN_EXAMPLES:
         fn(*args)
 
 
